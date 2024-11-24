@@ -23,8 +23,8 @@ export class InMemoryRepository implements UserRepository {
         return this.users.find(user => user.id.value === id.value) || null
     }
 
-    async getOneByEmail(email: string): Promise<User | null> {
-        return this.users.find(user => user.email.value === email) || null
+    async getOneByEmail(email: UserEmail): Promise<User | null> {
+        return this.users.find(user => user.email.value === email.value) || null
     }
 
     async edit(user: User): Promise<void> {
