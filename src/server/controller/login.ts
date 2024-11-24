@@ -4,13 +4,12 @@ import { MongoRepository } from "../../lib/User/infraestructure/MongoRepository"
 import { AuthInvalidCredentialsError } from '../../lib/Auth/login/domain/AuthInvalidCredentialError';
 import { isEmpty } from "../middleware/validateEntries"
 
-
-const Login = async (req: Request, res: Response) => {
+const Login = async (req: Request, res: Response): Promise<Response<any, Record<string, any>> | any> => {
+    const userRequest = isEmpty(req.body)
+    if(userRequest.error) return res.status(400).send(userRequest.message)
 
     const userRepository = new MongoRepository()
     const loginUser = new LoginUser(userRepository)
-   
-    if(isEmpty(req.body)) res.status(400).send('Bad request')
     const { email, password } = req.body
 
     try {
