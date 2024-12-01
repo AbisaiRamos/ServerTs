@@ -2,7 +2,7 @@ import express from 'express'
 import session from 'express-session'   
 import cors from 'cors'
 import expressAuthRouter from './lib/Auth/shared/infraestructure/routes/Express.Auth.Router'
-import { connectToDatabase } from './lib/Shared/infraestructure/database/mongoDB/mongo.conection'
+import connectToDatabase from './lib/Shared/infraestructure/database/mongoDB/mongo.conection'
 
 const app = express()
 const port = 3000
