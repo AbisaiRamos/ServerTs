@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { MongoRepository } from "../../../User/infraestructure/MongoRepository"
+import { MongoRepository } from "../../../User/infraestructure/repositories/MongoRepository"
 import { LoginUser } from "../application/LoginUser"
 import { AuthInvalidCredentialsError } from "../domain/AuthInvalidCredentialError"
 

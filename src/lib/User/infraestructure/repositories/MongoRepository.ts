@@ -1,13 +1,13 @@
-import { UserModel } from './mongoDb/Models'
+import { UserModel } from '../mongoDb/Models'
 import mongoose from 'mongoose'
 import { ObjectId } from 'mongodb'
-import { User } from '../domain/User';
-import { UserId } from '../domain/UserId';
-import { UserName } from '../domain/UserName';
-import { UserEmail } from '../domain/UserEmail';
-import { UserPassword } from '../domain/UserPassword';
-import { UserCreatedAt } from '../domain/UserCreateAt';
-import { UserRepository } from '../domain/UserRepository';
+import { User } from '../../domain/User';
+import { UserId } from '../../domain/UserId';
+import { UserName } from '../../domain/UserName';
+import { UserEmail } from '../../domain/UserEmail';
+import { UserPassword } from '../../domain/UserPassword';
+import { UserCreatedAt } from '../../domain/UserCreateAt';
+import { UserRepository } from '../../domain/UserRepository';
 
 export class MongoRepository implements UserRepository {
     async create(user: User): Promise<void> {

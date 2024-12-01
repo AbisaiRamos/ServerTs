@@ -1,5 +1,5 @@
 // import { InMemoryRepository } from "../../User/infraestructure/InMemoryRepository";
-import { MongoRepository } from "../../User/infraestructure/MongoRepository";
+import { MongoRepository } from "../../User/infraestructure/repositories/MongoRepository";
 import { UserCreate } from "../../User/application/UserCreate";
 import { UserGetAll } from "../../User/application/UserGetAll";
 import { UserEdit } from "../../User/application/UserEdit";
