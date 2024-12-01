@@ -15,7 +15,6 @@ export class ExpressSignupController {
             res.status(201).send({ message: 'User created', newUser })
 
         } catch (error: AuthInvalidCredentialsError | any) {
-            console.log(error)
             res.status(400).send(error.message)
 
         }
